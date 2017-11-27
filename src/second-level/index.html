@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>2nd Level Iframe</h1>
+    <div id="message-area"></div>
+    <script>
+      window.addEventListener('message', function(event) {
+        document.getElementById('message-area').innerHTML = event.data + ' from ' + event.origin
+        setTimeout(function () {
+          event.source.postMessage('2nd Level Iframe resposne to ' + event.data, event.origin)
+        }, 1000)
+      }, false)
+    </script>
+  </body>
+</html>
