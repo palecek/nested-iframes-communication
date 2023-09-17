@@ -4,7 +4,7 @@
     <h1>1st Level Iframe</h1>
     <button type="button" onclick="sendMessage()">send message to 2nd level iframe</button>
     <div id="message-area"></div>
-    <iframe id="first" src="http://127.0.0.1:8182" width="300" height="200"></iframe>
+    <iframe id="first" src="http://localhost:8182" width="300" height="200"></iframe>
     <script>
       window.addEventListener('message', function(event) {
         document.getElementById('message-area').innerHTML = event.data + ' from ' + event.origin
@@ -12,7 +12,7 @@
       var iframe = document.getElementById('first').contentWindow
       var count  = 0
       function sendMessage() {
-        iframe.postMessage(++count + ' message from 1st Level Iframe', 'http://127.0.0.1:8182')
+        iframe.postMessage(++count + ' message from 1st Level Iframe', 'http://localhost:8182')
       }
     </script>
   </body>

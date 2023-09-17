@@ -12,7 +12,7 @@ Prerequisites: node.js
 
 It starts http 3 live-server Webservers on ports 8180, 8181, 8182.
 
-3. Browse to http://127.0.0.1:8180
+3. Browse to http://localhost:8180
 
 # Result Screenshot
 ![Screenshot](screenshot.png)
